@@ -1,0 +1,68 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap');
+/* 초기화 */
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, dl, dd, figure, form, fieldset, input, table, th, td { margin: 0; padding: 0; }
+li { list-style: none; }
+a { text-decoration: none; }
+table { border-collapse: collapse; }
+fieldset, iframe { border: 0; }
+address { font-style: normal; }
+hr { display: none; }
+.hidden { position: absolute; left: -9999px; }
+body { font-family: 'Noto Sans KR', sans-serif; }
+/* 헤더 */
+#headerWrap { background: #f1e3c4; }
+#header { width: 1200px; height: 90px; margin: 0 auto; border: 1px solid #000; }
+#header h1 { width: 202px; float: left; padding: 20px 0 0 30px; }
+#header h1 a { display: block; height: 50px;
+              /* text-indent: -5000px; */
+              text-indent: 100%; overflow: hidden;
+              background: url(../images/logo.gif) no-repeat; }
+/* gnb */
+#gnb { float: right; margin: 40px 50px 0 0; font-size: 13px;  }
+#gnb li { float: left; margin-left: 30px; }
+#gnb li.line a { position: relative; }
+#gnb li.line a::after { content: ""; position: absolute; top: 5px; right: -15px;
+                        height: 10px; border: 1px solid #785e32; }
+#gnb li a { color: #2d2619  }
+#gnb li dl { padding: 10px 20px;  position: relative; top: -15px; }
+#gnb li dl dd { display: none; }
+#gnb li dl dd:first-of-type { display: block; padding: 5px 0; }
+#gnb li dl.active { position: relative; background: #69521e; }
+#gnb li dl.active::after { content: "";
+                      position: absolute; top: 40px; left: 0;
+                      width: 100%; border-bottom: 1px solid #eaf49b }
+#gnb li dl.active dd a { color: #fff; }
+#gnb li dl.active dd:first-of-type a { position: relative; color: #ff0; }
+#gnb li dl.active dd { display: block; }
+
+/* lnb */
+#lnb { float: left; margin: 40px 0 0 130px; }
+#lnb li { float: left; margin-right: 70px; }
+#lnb li a { color: #2d2619 }
+/* slider */
+#sliderWrap { position: relative; width: 100%; height: 650px; }
+#sliderWrap ul li { position: absolute; top: 0; left: 0; width: 100%; height: 650px;
+                    background: no-repeat center center / cover; }
+#sliderWrap ul li::before { content: ""; position: absolute; top: 0; left: 0;
+                            width: 100%; height: 100%;
+                            background: rgba(0, 0, 0, 0.5); }
+#sliderWrap ul li.slider1 { background-image: url(../images/bgSlider1.jpg); z-index: 1; }
+#sliderWrap ul li.slider2 { background-image: url(../images/bgSlider2.jpg) }
+#sliderWrap ul li.slider3 { background-image: url(../images/bgSlider3.jpg) }
+#sliderWrap ul li > div { position: relative; width: 1200px; margin: 0 auto; }
+#sliderWrap ul li > div h3 { color: #fff; }
+#sliderWrap ul li > div p { color: #fff; }
+#sliderWrap ul li > div a { color: #fff; }
+/* 검색 예약 */
+form { height: 100px; }
+/* 스페셜오퍼 */
+#offer { position: relative; width: 1200px; height: 740px; margin: 0 auto; }
+#offer h2 { text-align: center; }
+#offer ul { margin-top: 100px; }
+#offer ul li { position: absolute; }
+#offer ul li:nth-child(1) { top: 100px; left: 0; width: 793px; height: 360px; background: #b9d7a2; }
+#offer ul li:nth-child(2) { top: 100px; right: 0; width: 386px; height: 260px; background: #a4d67d; }
+#offer ul li:nth-child(3) { bottom: 0; left: 0; width: 386px; height: 260px; background: #79b849; }
+#offer ul li:nth-child(4) { bottom: 0; left: 406px; width: 386px; height: 260px; background: #579c23; }
+#offer ul li:nth-child(5) { bottom: 0; right: 0; width: 386px; height: 360px; background: #346310; }

@@ -1,0 +1,68 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500&display=swap');
+/*초기화*/
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, dl, dd, form, fieldset, input {margin: 0; padding: 0;}
+li {list-style: none;}
+a {text-decoration: none; color: #333;}
+fieldset {border: 0;} /*픽셀단위를 없을 때는 0*/
+.hidden {position: absolute; left: -9999px;} 
+/*웹폰트 적용 notosans*/
+body {font-family: 'Noto Sans KR', sans-serif;}
+/*헤더*/
+#headWrap {border-bottom: 1px solid lightgray;}
+#header {width: 1320px; height: 62px; margin: 0 auto;}
+#header h1 {width: 167px; float: left;} 
+#header h1 a {display: block; height: 50px; text-indent: -5000px; background: url(image/logo.png) no-repeat;} 
+#header nav {float: left;}
+#header nav ul li {float: left; margin: 10px; line-height: 40px;}
+#header nav ul li a {color: #797979;}
+/*검색*/
+#header form {float: right; padding-top: 6px;}
+#header form fieldset {float: left;}
+#search {width: 280px; height: 40px; background-color: #f7f7f7; border:0;}
+#header form fieldset:nth-child(2) input{width: 80px; height: 30px; background-color: #fff; margin-top: 5px;}
+#loginBtn {border: 0;}
+#joinBtn {border: 1px solid #a4a4a4; border-radius: 5px;}
+/*a 태그는 inline 속성 : 넓이와 높이를 가지게 하기 위해서는 반드시 block 속성을 줘야함
+ h1 태그는 block 속성*/
+/*섹션*/
+section { overflow: hidden; width: 1320px; margin:40px auto 0;} 
+section ol li {width: 250px; float: left; margin-right: 17.5px; position: relative;} 
+section ol li:last-child {margin: 0;}
+section ol dl dt {position:absolute; bottom: 80px;} 
+section ol li dl dd img {width: 250px; margin-bottom: 30px;}  
+/*position: absolute << 브라우저 창을 기준으로 위치값을 잡게 됨, 부모요소가 포지션 속성을 가지게 되면 그 속성을 가진 요소를 기준으로 이동 됨 
+  position: relative << 자기를 기준으로 위치값을 잡게 됨*/
+#content1 ol, #content2 ol {counter-reset: movie;} 
+#content1 ol li, #content2 ol li {position: relative;}
+#content1 ol li::before, #content2 ol li::before {counter-increment: movie; content: counter(movie); position: absolute; border-radius: 7px;
+                                                  top:20px; left: 20px; width: 30px; height: 30px; background-color: #000; color: #fff; text-align: center; line-height: 30px; font-size: 24px; z-index: 999;} 
+
+/*마지막 문장*/                                                  
+#value {height: 70px; background: #1d294b; color:#fff; font-size: 30px; text-align: center; line-height: 70px; margin-top: 70px;}
+#value span {color: #f14281;}
+/*푸터*/
+#footerWrap {background: #414141; color:#fff; font-size: 14px; padding: 30px 0;}
+#footerWrap a {color:#fff;} 
+#footer {width: 1320px; margin: 0 auto;}
+#footer ul { padding-bottom: 30px; }
+#footer ul li {float: left; margin-right: 10px; position: relative; padding-right: 10px;}
+#footer ul li::after {content: ""; position: absolute; top:5px; right: 0; height: 10px; border: 1px solid #fff;} /*::after >> 특정 문자 추가*/
+#footer ul li:last-child::after {border:0;} 
+#footer ul { padding-bottom: 30px;}
+#footer dl {clear: both; }
+#footer dl { clear: left; }
+#footer dl dt { float: left; margin-right: 20px; }
+#footer dl dd { float: left; }
+#footer p {clear: both; padding-top: 10px;}
+/*position 속성을 적용 할 때만 z-index를 적용 할 수 있다*/
+
+@media screen and (max-width: 1319px){
+
+  #header {width: 100%;} 
+  section {width: 100%;}
+  section ol li {width: 20%; margin: 0;}
+  section ol li dl dd img {width: 100%;}
+  section ol li dl dd:last-child {font-size: 0.7rem;} 
+  footer {width: 100%;}
+}

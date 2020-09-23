@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>변수</title>
+  </head>
+  <body>
+    <script>
+      // var, let, const
+      var a = 0;
+      console.log(a)
+      var a = 10;
+      console.log(a)
+      function test() {
+        a = 20
+      }
+      test();
+      console.log(a)
+
+      let b = 100;
+      console.log(b)
+
+      b = 200;
+      console.log(b);
+      // let b = 300;
+      // console.log(b);
+
+      const c = 1000; // 상수
+      console.log(c)
+      // c = 2000;
+      console.log(c)
+
+      const d = { a: 10, b: 20 }
+      d.a = 300;
+      console.log(d)
+
+      if ( true ) {
+        const c = 2000;
+        console.log(c)
+      }
+
+
+
+    </script>
+  </body>
+</html>

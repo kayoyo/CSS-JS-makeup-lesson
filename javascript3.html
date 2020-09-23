@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>자바스크립트</title>
+    <style>
+      html { scroll-behavior: smooth; }
+      body { margin: 0; padding: 0; }
+      div { height: 100vh; }
+      #content1 { background: #b5a5dd; }
+      #content2 { background: #56a494; }
+      #content3 { background: #bcc477; }
+    </style>
+  </head>
+  <body>
+      <div id="content1">content1</div>
+      <div id="content2">content2</div>
+      <div id="content3">content3</div>
+      <script>
+        let div = document.querySelectorAll('div');
+        // window.scrollTo(0, 300)
+        // window.scrollBy(0, 300)
+        console.log(window.innerHeight)
+        console.log(window.outerHeight)
+        console.log(div[0].clientHeight)
+        console.log(document.body.clientHeight)
+        div[0].addEventListener('wheel', function(e) {
+          e.preventDefault();
+          if ( e.wheelDelta < 0) {
+            window.scrollBy(0, window.innerHeight)
+          }
+        })
+        div[1].addEventListener('wheel', function(e) {
+          e.preventDefault();
+          if ( e.wheelDelta < 0) {
+            window.scrollBy(0, window.innerHeight)
+          }
+          else {
+            window.scrollTo(0, 0)
+          }
+        })
+        div[2].addEventListener('wheel', function(e) {
+          e.preventDefault();
+          if ( e.wheelDelta > 0) {
+            window.scrollBy(0, -window.innerHeight)
+          }
+        })
+
+
+      </script>
+  </body>
+</html>

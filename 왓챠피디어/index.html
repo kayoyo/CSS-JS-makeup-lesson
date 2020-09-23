@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <!--반응형을 위한 뷰포트-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="common.css"> 
+</head>
+<!--(header / nav) : 머리글 / (section / article ) : 본문 / (aside) : 사이드 본문 / (footer) : 바닥글-->
+<body>
+    <div id="headWrap">
+    <header id="header">
+        <h1><a href="#">watcha pedia</a></h1>
+        <nav>
+            <h2 class="hidden">watcha pedia memu</h2>
+            <ul>
+                <li><a href="#">영화</a></li>
+                <li><a href="#">TY프로그램</a></li>
+                <li><a href="#">책</a></li>
+            </ul>
+        </nav>
+        <form>
+            <fieldset>
+                <legend class="hidden">검색</legend>
+                <label for="search" class="hidden">검색어 입력창</label>
+                <input type="text" id="search" placeholder= "작품, 배우, 감독을 검색해 보세요">
+            </fieldset>
+            <fieldset>
+                <legend class="hidden">회원관련</legend>
+                <input type="button" value="로그인" id="loginBtn">
+                <input type="button" value="회원가입" id="joinBtn">
+            </fieldset>
+        </form>
+    </header>
+    </div>
+    <main>
+    <section id="content1">
+        <h2>박스오피스</h2>
+        <ol>
+            <li>
+        <dl>
+            <dt>테넷</dt>
+            <dd><img src="image/1.jpg"></dd>
+            <dd>2020 영국</dd>
+            <dd>평균 3.9</dd>
+            <dd>예매율 35% 누적관객 112만명</dd>
+        </dl>
+            </li>
+            <li>
+        <dl>
+            <dt>기기괴괴성형수</dt>
+            <dd><img src="image/2.jpg"></dd>
+            <dd>2020 한국</dd>
+            <dd>평균 3.0</dd>
+            <dd>예매율 5.7% 누적관객 303명</dd>
+        </dl>
+            </li>
+            <li>
+        <dl>
+            <dt>기생충</dt>
+            <dd><img src="image/3.jpg"></dd>
+            <dd>2019 한국</dd>
+            <dd>평균 4.3</dd>
+            <dd>예매율 35% 누적관객 112만명</dd>
+        </dl>
+            </li>
+            <li>    
+        <dl>
+            <dt>베놈</dt>
+            <dd><img src="image/4.jpg"></dd>
+            <dd>2018 미국</dd>
+            <dd>평균 3.3</dd>
+            <dd>예매율 35% 누적관객 112만명</dd>
+        </dl>
+            </li>
+            <li>    
+        <dl>
+            <dt>흥부</dt>
+            <dd><img src="image/5.jpg"></dd>
+            <dd>2017 한국</dd>
+            <dd>평균 2.6</dd>
+            <dd>예매율 35% 누적관객 112만명</dd>
+        </dl>
+            </li>
+        </ol>
+    </section>
+    <section id="content2">
+        <h2>왓챠 영화순위</h2>
+        <ol>
+            <li>
+        <dl>
+            <dt>테넷</dt>
+            <dd><img src="image/1.jpg"></dd>
+            <dd>2020 영국</dd>
+            <dd>평균 3.9</dd>
+            <dd>예매율 35% 누적관객 112만명</dd>
+        </dl>
+            </li>
+            <li>
+        <dl>
+            <dt>기기괴괴성형수</dt>
+            <dd><img src="image/2.jpg"></dd>
+            <dd>2020 한국</dd>
+            <dd>평균 3.0</dd>
+            <dd>예매율 5.7% 누적관객 303명</dd>
+        </dl>
+            </li>
+            <li>
+        <dl>
+            <dt>기생충</dt>
+            <dd><img src="image/3.jpg"></dd>
+            <dd>2019 한국</dd>
+            <dd>평균 4.3</dd>
+            <dd>예매율 35% 누적관객 112만명</dd>
+        </dl>
+            </li>
+            <li>
+        <dl>
+            <dt>베놈</dt>
+            <dd><img src="image/4.jpg"></dd>
+            <dd>2018 미국</dd>
+            <dd>평균 3.3</dd>
+            <dd>예매율 35% 누적관객 112만명</dd>
+        </dl>
+            </li>
+            <li>
+        <dl>
+            <dt>흥부</dt>
+            <dd><img src="image/5.jpg"></dd>
+            <dd>2017 한국</dd>
+            <dd>평균 2.6</dd>
+            <dd>예매율 35% 누적관객 112만명</dd>
+        </dl>
+            </li>
+    </ol>
+</section>
+    </main>
+    <p id="value">지금까지 <span>★ 571,999,280 개의 평가</span>가 쌓였어요.</p>
+    <div id="footerWrap">
+        <footer id="footer">
+            <ul>
+                <li><a href="#">서비스 이용약관</a></li>
+                <li><a href="#">개인정보 처리방침</a></li>
+                <li><a href="#">회사 안내</a></li>
+            </ul>
+                <dl>
+                    <dt>고객센터</dt>
+                    <dt>cs@watchapedia.co.kr</dt>
+                </dl>
+                <dl>
+                    <dt>제휴 및 대외 협력</dt>
+                    <dt>contact@watcha.com</dt>
+                    <dt>070-7554-9696</dt>
+                </dl>
+                <p>주식회사 왓챠대표 박태훈서울특별시 서초구 강남대로 343 신덕빌딩 3층
+                <br>사업자 등록 번호 211-88-66013</p>
+                <small>watchapedia &copy; 2011 Watcha. Inc</small>
+        </footer>
+    </div>
+</body>
+</html>

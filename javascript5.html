@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>슬라이드</title>
+    <style>
+        #sliderWrap { overflow: hidden; width: 300px; margin: 0 auto; border: 3px solid red;}
+        #slider {width: 900px; transition: 1s;}
+        img {display: block; float: left;}
+    </style>
+</head>
+<body>
+<div id="sliderWrap">
+ <div id="slider">   
+    <img src="2.jpg" alt="" width="300">
+    <img src="3.jpg" alt="" width="300">
+    <img src="4.jpg" alt="" width="300">
+</div>
+<div id="btnWrap">
+<a href="#" class="btnPrev">Prev</a>
+<a href="#" class="btnNext">Next</a>
+</div>
+</div>
+<script>
+    let slider = document.querySelector('#slider');
+    let img = document.querySelector('img');
+    let prevBtn = document.querySelector('.btnPrev');
+    let nextBtn = document.querySelector('.btnNext');
+
+    console.log(prevBtn, nextBtn, slider);
+    console.log(img);
+
+    slider.style.marginLeft = "0px";
+    nextBtn.addEventListener("click", function() {
+        clearInterval(timer)
+        sliding();
+    })
+
+    prevBtn.addEventListener("click", function() {
+        clearInterval(timer)
+        if(slider.style.marginLeft == "0px") {
+            slider.style.marginLeft = "-600px";
+        } else {
+            slider.style.marginLeft = (parseInt(slider.style.marginLeft)+300)+"px";
+        }
+        
+    })
+    function sliding() {
+        if(slider.style.marginLeft == "-600px") {
+            slider.style.marginLeft = "0px"
+        } else {
+            slider.style.marginLeft = (parseInt(slider.style.marginLeft)-300)+"px";
+        }  
+    }
+    let timer = setInterval(sliding, 2000)
+</script>
+</body>
+</html>

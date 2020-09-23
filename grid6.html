@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>그리드</title>
+    <style>
+      #wrap { display: grid;
+              grid-template-columns: auto auto auto auto auto;
+              background: #7ba1db;
+              padding: 20px;
+            }
+      .item { background: #8fde6c; border: 1px solid #000;
+              font-size: 30px; text-align: center;
+              padding: 20px; }
+      .item1 { grid-row: 1 / span 2; }
+      .item2 { grid-column: 2 / span 3; }
+
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="item item1">1</div>
+      <div class="item item2">2</div>
+      <div class="item item3">3</div>
+      <div class="item item4">4</div>
+      <div class="item item5">5</div>
+      <div class="item item6">6</div>
+      <div class="item item7">7</div>
+    </div>
+  </body>
+</html>

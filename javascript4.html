@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>일정 위치에서 애니메이션</title>
+    <style>
+        div {height: 600px; background: aquamarine;}
+        section {position: relative; height: 300px;}
+        img {position:absolute; top: 0; transition: 0.5s;} 
+    </style>
+</head>
+<body>
+    <div></div>
+        <section>
+            <img src="1.jpg" alt="" width="200">
+        </section>
+    <div></div>
+    <script>
+        let pic = document.querySelector('img');
+        console.log(pic)
+        pic.style.left = "0px"
+        window.addEventListener('scroll', function(){
+            console.log(window.scrollY)
+            if(window.scrollY >=400) {
+                pic.style.opacity = "1";
+                pic.style.marginLeft = "200px";
+            }
+        })
+    </script>    
+</body>
+</html>

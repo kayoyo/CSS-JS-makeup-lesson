@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>그리드</title>
+    <style>
+      body { margin: 0; }
+      #wrap { display: flex; flex-flow: row wrap;  }
+      #header { width: 100%; height: 200px; text-align: center;
+                font-size: 50px;
+                background: #c2dfd9 }
+      section { height: 500px; flex: 1 1 auto; }
+      #content1 { background: #e1e2e3; }
+      #content2 { background: #afb6bd; }
+      #content3 { background: #3b5670; }
+      #footer { width: 100%; height: 200px; text-align: center;
+                font-size: 50px;
+                background: #76a89e }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <header id="header">header</header>
+      <section id="content1">section1</section>
+      <section id="content2">section2</section>
+      <section id="content3">section3</section>
+      <footer id="footer">footer</footer>
+    </div>
+  </body>
+</html>

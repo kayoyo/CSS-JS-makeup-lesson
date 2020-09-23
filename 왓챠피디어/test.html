@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+        div { width: 200px; height: 200px; position: absolute;  }
+        #box1 { background: #4ec2be; top: 50px; left: 50px; z-index: 1;  }
+        #box2 { background: #6df466; top: 100px; left: 100px; }
+</style>
+</head>
+<body>
+    <div id="box1" class="boxC1">박스1</div>
+    <div id="box1" class="boxC2">박스2</div>
+    <script>
+        //var box = document.getElementsByTagName("div"); 태그로 선택
+        //var box = document.getElementById("box1"); id 이름으로 선택
+        //var box = document.getElementsByClassName("boxC1"); 클래스 이름으로 선택
+        //var box = document.querySelector("#box1"); id 이름으로 선택  
+        //var box = document.querySelectorAll("div"); 태그로 선택  
+        
+        let box = document.querySelectorAll('div');
+        let n = 1;
+
+        box[0].addEventListener("click", function() {
+            n++
+            this.style.zIndex = "n"
+        })
+        box[1].onclick = function() {
+            n++
+            this.style.zIndex = "n"     
+        }
+    </script>
+</body>
+</html>

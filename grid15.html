@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>그리드</title>
+    <style>
+      body { margin: 0; }
+      #wrap { display: grid;
+              grid-template-areas: 'header header header header header header'
+                                  'content1 content1 content2 content2 content2 content3'
+                                  '. footer footer footer footer .';
+              gap: 0 20px;
+              }
+      #header { height: 200px; text-align: center; font-size: 50px; background: #c2dfd9;
+                grid-area: header; }
+      section { height: 500px; }
+      #content1 { background: #e1e2e3; grid-area: content1; }
+      #content2 { background: #afb6bd; grid-area: content2; }
+      #content3 { background: #3b5670; grid-area: content3; }
+      #footer { height: 200px; text-align: center; font-size: 50px; background: #76a89e;
+                grid-area: footer; }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <header id="header">header</header>
+      <section id="content1">section1</section>
+      <section id="content2">section2</section>
+      <section id="content3">section3</section>
+      <footer id="footer">footer</footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>scroll 위치</title>
+    <style>
+      body { height: 2000px; }
+      div { position: fixed; top: 300px; left: 100px;
+            width: 200px; height: 200px;
+            background: #70e495; }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <script>
+      let divTag = document.querySelector('div');
+      divTag.style.left = "0px"
+      window.addEventListener('wheel', function(e) {
+          if ( e.wheelDelta < 0 ) {
+            // console.log("test1")
+            divTag.style.left = (parseInt(divTag.style.left) + 5)+"px";
+          }
+          else {
+            // console.log("test2")
+            divTag.style.left = (parseInt(divTag.style.left) - 5)+"px";
+          }
+      })
+
+    </script>
+  </body>
+</html>
